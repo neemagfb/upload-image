@@ -1,60 +1,53 @@
-<body>
+<!DOCTYPE html>
+<html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="tenga.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Táblázat PDF Konvertálás</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.11/jspdf.plugin.autotable.min.js"></script>
+    <style>
+        #download {
+            margin-top: 20px; /* Gomb távolsága */
+        }
+    </style>
 </head>
-<h2 class="h"><span>T3NGA</span><span id="cx">.</span><span id ="cc">com</span></h2>
-<div id="div1">
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">New</a></li>
-    <li><a href="#">Page</a></li> 
-    <li><a href="#">Port</a></li>
-  </ul>
-</div>
-<form >
-<table id="bly">
-  <h2 id="two">Logn in</h2>
-  <input type="text" id="in1"placeholder="User">
-  <input type="password" id="in2"placeholder="Password"><br>
-  <a href="logn in.com "><input type="submit"value="تسجيل دخول" id="in3"></a><br>Remember me
-  <input type="checkbox" value="Remember my">
-</table>
-</form>
-<fieldset>
-  <center>
-  <legend><h2 id="thr">sign up</h2></legend>
-  <input type=" text" id="T1" placeholder="اسم المستخدم">
-  <input type="gmail" id="T2" placeholder=".....@gmail.com">
-  <input type="password" id="p1" placeholder="كلمة المرور">
-  <input type="password" id="p2" placeholder="تاكيد كلمة المرور">
-  <input type="phone" id="ph" placeholder="phone"> <br>
-  <input type="submit" value="تسجيل" id="mbc">
-  </center>
-  </fieldset><br><br>
-  <p id="com">Let comment<span id="poi">...</span></p>
- 
- 
-  
-  <table>
-  <header id="ido">Name</header>
-  <input type="text" id="idt">
-  </tabl>
-  
-  <table>
-  <header id="idf">Email</header>
-  <input type="gmail" id="v">
-  </tabl>
-  
-  <table>
-    <header id="tx">Message</header>
-    <textarea id="xx" placeholder="let message here"></textarea>
-    <input type="submit"value="Send Message" id="ms">
-    <hr >
-    <dl id="dl1">
-      <dt id="dt1">Address   :<dd id="dd1">Mahdi Alaboody </dd>
-        <dt id="dt3">Telegram :</dt><dd id="dd3">@PHP967</dd>
-    </dl>
-    
-  </table>
-  
+<body>
+    <h1>HTML Táblázat</h1>
+    <table id="myTable" border="1">
+        <thead>
+            <tr>
+                <th>Név</th>
+                <th>Kor</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>János</td>
+                <td>30</td>
+                <td>janos@example.com</td>
+            </tr>
+            <tr>
+                <td>Mária</td>
+                <td>25</td>
+                <td>maria@example.com</td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="download">PDF letöltése</button>
+
+    <script>
+        document.getElementById('download').addEventListener('click', () => {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Hozzáadunk egy szöveget a PDF-hez
+            doc.text("Ez egy teszt letöltés.", 10, 10);
+
+            // PDF mentése
+            doc.save('test_download.pdf');
+        });
+    </script>
+</body>
+</html>
