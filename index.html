@@ -1,53 +1,86 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html>
+  
+<!-- Mirrored from a7.aboel1.repl.co/ by HTTrack Website Copier/3.x [XR&CO'2017], Thu, 09 Feb 2023 16:18:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Táblázat PDF Konvertálás</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.11/jspdf.plugin.autotable.min.js"></script>
-    <style>
-        #download {
-            margin-top: 20px; /* Gomb távolsága */
-        }
-    </style>
-</head>
-<body>
-    <h1>HTML Táblázat</h1>
-    <table id="myTable" border="1">
-        <thead>
-            <tr>
-                <th>Név</th>
-                <th>Kor</th>
-                <th>Email</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>János</td>
-                <td>30</td>
-                <td>janos@example.com</td>
-            </tr>
-            <tr>
-                <td>Mária</td>
-                <td>25</td>
-                <td>maria@example.com</td>
-            </tr>
-        </tbody>
-    </table>
-    <button id="download">PDF letöltése</button>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>A7 </title>
+      <link href="style.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="../use.fontawesome.com/releases/v5.13.0/css/all.css">
+      <link rel="icon" href="../external.html?link=https://unsplash.com/photos/9du9Z_KEDNs">
+      <script src="../ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="script.js"></script>
+  </head>
+    <body>
+	  
+        <div class="container">
+	  
+		<!--────────────────Header───────────────-->
+	<header>
+		<a class="logo" href="#home">
+              <img src="../external.html?link=https://unsplash.com/photos/9du9Z_KEDNs" alt="A7 " />
+		</a>
+		<nav>	
+		 <ul class="nav-bar"><div class="bg"></div>
+			<li><a class="nav-link active" href="#home">Home</a></li>
+			<li><a class="nav-link" href="#projects">Projects</a></li>
+			<li><a class="nav-link" href="#contact">Contact</a></li>
+		 </ul>
+			
+			<div class="hamburger">
+				<div class="line1"></div>
+            <div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<!--─────────────────Home────────────────-->
+	  <div id="home">
+		 <div class="filter"></div>
+		 <section class="intro">
+		  <h3>i am A7.<hr></h3>
+		  <p>the worst programmer, someone who loves programming.</p>
+		  <p>a developer and student and graphic designer.</p>
+          <p>مبرمج ومصمم وايضا طالب .</p>
+			  
+		  <!--────social media links─────-->
+			 
+		  <div class="social-media">
+			  <a href="../external.html?link=https://twitter.com/a7_be7" target="_blank"><i class='fab fa-twitter'></i></a>
+			  <a href="../external.html?link=https://github.com/a7-pro" target="_blank"><i class='fab fa-github'></i></a>
+			  <a href="../external.html?link=https://www.youtube.com/channel/UCFhI5Z7XVT_nApvrxT8rtXQ" target="_blank"><i class="fab fa-youtube"></i></a>
+		    </div>
+			 
+		 </section> 
+	  </div>  
+		
+	  <!--───────────────Projects───────────────-->
+	  <div id="projects"> 
+		 <h3>My Projects.<hr></h3>
+		  <p>Here are some of my projects, you may like.</p>
+		  <div class="work-box">
+		  <div class="work">
+		<!--───────────────card───────────────-->
 
-    <script>
-        document.getElementById('download').addEventListener('click', () => {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
+			<div class="card">
+			    <img class="work-img" src="../external.html?link=https://images.unsplash.com/photo-1462642109801-4ac2971a3a51?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1266&amp;q=80">
+				<a href="../external.html?link=https://t.me/notrobot_itsbot" target="_blank"> <!--t.me/notrobot_itsbot-->
+				<div class="work-content">بوت سعيد للذكاء الاصطناعي.</div></a>
+            </div>
 
-            // Hozzáadunk egy szöveget a PDF-hez
-            doc.text("Ez egy teszt letöltés.", 10, 10);
+		 
 
-            // PDF mentése
-            doc.save('test_download.pdf');
-        });
-    </script>
-</body>
+
+	</main>
+	  <footer class="copyright">© 2023 
+		  <a href="../external.html?link=https://t.me/a7_be7" target="_blank"> a7 team</a>
+     </footer>
+	  
+  </div>
+
+
+<!-- Mirrored from a7.aboel1.repl.co/ by HTTrack Website Copier/3.x [XR&CO'2017], Thu, 09 Feb 2023 16:18:08 GMT -->
 </html>
