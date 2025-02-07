@@ -6,8 +6,8 @@ import time
 from telebot import types
 
 
-TOKEN = '8114879990:AAG3vJ4YmMtM67UDDtKNQiF155rXTyDiEyw' 
-ADMIN_IDS = [1523406780]  
+TOKEN = '' 
+ADMIN_IDS = []  
 mandatory_subscription_channel = '@rand2m'  
 
 
