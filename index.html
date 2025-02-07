@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Táblázat PDF Konvertálás</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.11/jspdf.plugin.autotable.min.js"></script>
+    <style>
+        #download {
+            margin-top: 20px; /* Gomb távolsága */
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Táblázat</h1>
+    <table id="myTable" border="1">
+        <thead>
+            <tr>
+                <th>Név</th>
+                <th>Kor</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>János</td>
+                <td>30</td>
+                <td>janos@example.com</td>
+            </tr>
+            <tr>
+                <td>Mária</td>
+                <td>25</td>
+                <td>maria@example.com</td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="download">PDF letöltése</button>
+
+    <script>
+        document.getElementById('download').addEventListener('click', () => {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Hozzáadunk egy szöveget a PDF-hez
+            doc.text("Ez egy teszt letöltés.", 10, 10);
+
+            // PDF mentése
+            doc.save('test_download.pdf');
+        });
+    </script>
+</body>
+</html>
